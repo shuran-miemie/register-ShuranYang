@@ -1,0 +1,726 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 16px;
+    font-size: 62.5%; /*devided everything by 10*/
+    box-sizing: border-box;
+    margin: 0 ;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  width: 100%;
+}
+
+header {
+    height: 30rem;
+    position: relative;  
+}
+
+header section{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin:1% 10%;
+}
+
+.pull-left {
+  float: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+#hideMe {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.icon-switch {display: none;}
+
+#menu #hideMe {display: block;}
+
+#menu.hidden-menu #hideMe {display: none;}
+
+.menu-item {
+  float: left;
+}
+.menu a,
+.menu-item a,
+.menu-item a:link,
+.menu-item a:visited {
+  display: block;
+  padding: 1.5rem 2rem;
+  line-height: 1rem;
+  text-decoration: none;
+  color: #454647;
+  text-transform: uppercase;
+  font-size:1.2rem;
+}
+
+.menu-item a:hover {
+  color: #00c8c8;
+}
+
+#menu {
+  float: right;
+}
+.banner {
+    background-image: url(../img/hb.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height:30rem;
+    text-align: center;
+    margin-top: 0;
+    text-transform: uppercase;
+    position: relative;
+    color: #ffffff;
+    top:4rem;
+}
+header h2 {
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 400;
+    font-size: 3rem;
+    margin:0 auto;
+    text-align: center;
+    padding-top: 8rem;
+    left: 0;
+    right: 0;
+}
+header h3 {
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 400;
+    font-size:1.8rem;
+    margin:0 auto;
+    text-align: center;
+    padding-top: 13rem;
+    left: 0;
+    right: 0;
+}
+
+fieldset{
+  border: none;
+}
+
+main{
+  margin-top: 1rem;
+
+}
+
+.contact-form {
+  margin-top:1rem; 
+}
+
+.contact-form h2 {
+  display:block;
+  text-transform: uppercase;
+  color: #8f8f8f;
+}
+
+.contact-form ul{
+  width: 100%;
+  list-style-position: outside;
+  padding-left: 0;
+  border: none;
+}
+
+.contact-form li {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  text-transform: capitalize;
+}
+
+.agreement{
+  margin-top: 1rem;
+}
+
+.checkboxitem{
+  width: 40%;
+  float: left;
+  margin-bottom: 5%;
+  margin-right:2% 
+}
+
+.contact-form label, .howoften,.agreement,.checkboxs{
+  color: #8f8f8f;
+}
+
+input[type=text], input[type=email],input[type=Password], .howoften{
+  width: 100%;
+}
+
+.phonenumber, .textmessage, .preferences{
+  display: none;
+}
+.contact-form input:required:focus:invalid, .contact-form textarea:required:focus:invalid {
+  border-color: #bf40bf;}
+
+.contact-form input:required:valid, .contact-form textarea:required:valid {
+  border-color: #40bf40;}
+
+button{
+  background-color: white;
+  border: 1px solid black;
+  padding: 1%;
+  margin-top: 2%;
+  text-transform: uppercase;
+  width: 45%;
+}
+
+.policy{
+  width: 50%;
+  float: right;
+}
+
+.policy a,
+.policy a:link,
+.policy a:visited {
+  color: #00c8c8;
+  text-decoration: underline;
+  padding: 0 0;
+}
+
+.service h3{
+text-transform: uppercase;
+}
+
+.service a,
+.service a:link,
+.service a:visited {
+  color: #00c8c8;
+  padding: 0 0;
+  text-decoration: underline;
+}
+
+footer {
+  height: 47rem;
+  background-color: #f8f8f8;
+  margin-top: 5rem;  
+}
+footer ul{
+  list-style:none;
+  padding: 0;
+  margin: 0;
+}
+.fcontain{
+  width: 100%;
+}
+.info,
+.why,
+.lb,
+.contact {
+  float: left;
+  color:#727272;
+  width: 23%;
+  font-size: 1.2rem;
+}
+.contact {
+  width: 26%;
+}
+
+.info li:first-child,
+.why li:first-child,
+.lb li:first-child,
+.contact li:first-child {
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color:#575153;
+  padding-bottom: 2rem;
+}
+.info li,
+.why li,
+.lb li,
+.contact li {
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+
+.award {
+  width: 48%;
+  float: left;
+  margin-top: 3rem;
+  padding: 5%;
+  background-color: #333333;
+}
+.award p {
+  text-transform: uppercase;
+  font-weight: 300;
+  color:#ffffff;
+  font-size: 2.5rem;
+  margin:0 auto;
+  text-align: center;
+}
+
+.socialmedia {
+  width: 48%;
+  float: right;
+  margin-top: 3rem;
+  padding: 5%;
+  background-color: #00c8c8;
+}
+
+.socialmedia li{
+  float:left;
+  padding:1.7rem 2.5rem;
+  text-align: center;
+}
+footer h3{
+  text-transform: uppercase;
+  font-weight: 700;
+  color:#ffffff;
+  font-size: 2.5rem;
+  margin:0 auto;
+  text-align: center;
+}
+.fa-facebook-f,
+.fa-twitter,
+.fa-instagram,
+.fa-pinterest{
+    color: #ffffff;
+    font-size:2.7rem;
+}
+.copyright{
+  background-color: #333333;
+  color: #999999;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 40rem;
+}
+.copyright h5{
+  margin-left: 10rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+
+/*  media Queries  */
+
+@media only screen and (max-width: 360px)  {
+      .icon-switch {display: block;
+                    text-align: right;}
+
+      .menu-item, #menu {float: none;
+                        background-color: #ffffff;
+                      }
+      #menu .icon-switch::before{
+                              content: '☰';} 
+
+      #menu.hidden-menu .icon-switch::before {
+                              content:"☒"; }
+      .icon-switch{
+      display: block;
+      text-align: right;
+      text-decoration: none;
+      color: #222222;
+      position: relative;
+      font-size: 1.6rem;
+      }
+
+
+      #menu {text-align: center;}
+
+      .contact-form{
+        margin-left: 10%;
+        margin-right:10%;
+      }
+
+      header {background-color: #ffffff;
+        height: 15rem;
+      }
+      .banner{
+        height: 8rem;
+        top: 1.5rem;
+      }
+      header h2 {
+      font-size: 2rem; 
+      padding-top: 0rem;
+      }
+      header h3 {
+      font-size:1.4rem;
+      padding-top: 2.5rem;
+      }
+      footer{height:28rem;}
+      .award{
+        height: 8rem;
+      }
+      .info li:first-child,
+      .why li:first-child,
+      .lb li:first-child,
+      .contact li:first-child {
+        font-weight: 700;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+      .info li,
+      .why li,
+      .lb li,
+      .contact li {
+        font-size: 0.6rem;
+        padding-bottom: 0.6rem;
+      }
+      footer div{
+        margin-left: 0.21rem;
+        margin-right: 0.21rem;
+      }
+      footer h3{
+        font-size: 1.4rem;
+      }
+      .award p{
+        font-size: 1.2rem;
+      }
+      .socialmedia{
+        height: 8rem;
+      }
+      .socialmedia li{
+      padding:0.8rem 0.4rem;
+      text-align: center;
+      }
+      .copyright{
+        margin-top: 28rem;
+      }
+}
+@media only screen and (min-width: 1024px){
+  
+  body{
+    width: 1024px;
+    margin: 0 auto;
+  }
+  main{
+    width: 550px;
+    margin: 0 auto;
+  }
+
+.phonenumber, .textmessage, .preferences{
+  display: block;
+}
+.fname, .password,.subscribe,.language{
+  margin-right: 4%;
+
+}
+.fname, .lname,.password, .confirmpassword,.subscribe, .phonenumber,.language, .size{
+  width: 48%;
+  float: left;
+}
+.subscribe label{
+  font-size: 0.9rem;
+}
+.subscribe, .phonenumber{
+  margin-bottom: 3%;
+}
+.textmessage textarea{
+  width: 100%;
+  height: 200px;
+}
+.language select,.size select,.location select{
+  width: 100%;
+  margin-bottom: 5%;
+}
+.location{
+  width: 48%;
+}
+.policy p{
+  margin-left:29%;
+  font-size: 1.2rem;
+}
+
+.checkboxitem{
+  width: 31%;
+  float: left;
+  margin-bottom: 5%;
+  margin-right:2% 
+}
+footer{
+  padding:5rem 10rem;
+}
+}
